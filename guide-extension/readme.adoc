@@ -31,8 +31,8 @@ $NEO4J_HOME/bin/neo4j restart
 [source]
 ----
 cp target/neo4j-guide-extension-2.3.2.jar $NEO4J_HOME/plugins/
-echo 'dbms.unmanaged_extension_classes=extension.web=/guides' >>  $NEO4J_HOME/conf/neo4j-server.conf
-echo 'org.neo4j.server.guide.directory=data/guides' >> $NEO4J_HOME/conf/neo4j-server.conf
+echo 'dbms.unmanaged_extension_classes=extension.web=/guides' >>  $NEO4J_HOME/conf/neo4j.conf
+echo 'org.neo4j.server.guide.directory=data/guides' >> $NEO4J_HOME/conf/neo4j.conf
 $NEO4J_HOME/bin/neo4j restart
 
 :play http://localhost:7474/guides/test.html
